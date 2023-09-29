@@ -2,19 +2,14 @@ import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
 
 import {
   Colors,
   Header,
 } from 'react-native/Libraries/NewAppScreen';
-import { NavigationContainer } from '@react-navigation/native';
-import MainActivity from './src/screens/trial/MainActivity';
+import { Root } from './src/navigation';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -46,7 +41,7 @@ type SectionProps = PropsWithChildren<{
 //   );
 // }
 
-function App(): JSX.Element {
+function App(): JSX.Element{
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -54,37 +49,10 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-    <MainActivity/>
+    <SafeAreaView style={{flex:1}}>
+  <Root />
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  textView: {
-    justifyContent:'center'
-  },
-  text: {
-    textAlign:'center',
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
