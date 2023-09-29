@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -20,6 +13,8 @@ import {
   Colors,
   Header,
 } from 'react-native/Libraries/NewAppScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import MainActivity from './src/screens/trial/MainActivity';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -60,12 +55,7 @@ function App(): JSX.Element {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View style={styles.textView}><Text style={styles.text}>Bank Application</Text>         
-        </View>
-      </ScrollView>
+    <MainActivity/>
     </SafeAreaView>
   );
 }
