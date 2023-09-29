@@ -1,15 +1,9 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  useColorScheme,
-} from 'react-native';
+import {SafeAreaView, useColorScheme} from 'react-native';
 
-import {
-  Colors,
-  Header,
-} from 'react-native/Libraries/NewAppScreen';
-import { Root } from './src/navigation';
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
+import {Root} from './src/navigation';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -41,7 +35,7 @@ type SectionProps = PropsWithChildren<{
 //   );
 // }
 
-function App(): JSX.Element{
+function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -49,8 +43,8 @@ function App(): JSX.Element{
   };
 
   return (
-    <SafeAreaView style={{flex:1}}>
-  <Root />
+    <SafeAreaView style={{flex: 1}}>
+      <Root />
     </SafeAreaView>
   );
 }
