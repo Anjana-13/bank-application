@@ -15,8 +15,8 @@ export const styles = StyleSheet.create({
         color: color.defaultTheme.palette.black,
     },
     disabledPrimaryButton: {
-        backgroundColor: '#5065d9',
-        borderColor : '#5065d9'
+        backgroundColor: '#B8B8B8',
+        borderColor : '#B8B8B8'
     },
     primaryButton: {
         backgroundColor: '#304FFE',
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
         borderColor : '#304FFE'
     },
     disabledPrimaryText:{
-        color: '#FFFFFF66'
+        color: '#414141'
     },
     primaryText: {
         color: '#FFFFFF'

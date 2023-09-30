@@ -2,8 +2,8 @@ import { StyleProp, Text, TouchableOpacity, ViewStyle } from "react-native"
 import { styles } from "./CoreButton.styles";
 
 interface ButtonProp {
-    buttonLabel?: string;
-    onPress?: ()=> void;
+    buttonLabel: string;
+    onPress: ()=> void;
     buttonType?: string;
     buttonBodyStyle?: StyleProp<ViewStyle>;
     disabled?: boolean;

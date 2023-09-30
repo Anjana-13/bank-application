@@ -3,9 +3,14 @@ import Header from '../../../components/header/header';
 import {navigationRef} from '../../../utils';
 import {styles} from '../styles/sign-up-main.styles';
 import CoreButton from '../../../components/button/CoreButton';
-// import { CoreButton } from '../../../components';
+import {NavigationProp, ParamListBase} from '@react-navigation/native';
 
-const SignUpMain = () => {
+export interface SignUpMainProps {
+  navigation: NavigationProp<ParamListBase>;
+}
+
+const SignUpMain = (props: SignUpMainProps) => {
+    
   return (
     <View style={styles.container}>
       <Header navigation={navigationRef} />
@@ -28,14 +33,20 @@ const SignUpMain = () => {
           </Text>
         </View>
         <View style={styles.buttons}>
-          <CoreButton buttonLabel="Sign Up" buttonType="primary"></CoreButton>
+          <CoreButton
+            buttonLabel="Sign Up"
+            buttonType="primary"
+            onPress={() =>
+              props.navigation.navigate('onBoardingStack', {screen: 'enterMobile'})
+            }></CoreButton>
           <CoreButton
             buttonLabel="Login in"
             buttonType="secondary"
+            onPress={()=>{}}
             buttonBodyStyle={styles.loginButton}></CoreButton>
         </View>
         <View style={styles.terms}>
-            <Text style={styles.termsText}>Terms and Conditions apply</Text>
+          <Text style={styles.termsText}>Terms and Conditions apply</Text>
         </View>
       </View>
     </View>

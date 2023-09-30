@@ -2,6 +2,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import {Stack} from '../../../navigation/root.navigation';
 import OnBoardingScreen from '../screens/onBoarding.screen';
 import SignUpMain from '../screens/sign-up-main.screen';
+import EnterMobile from '../screens/enter-mobile.screen';
+import ConfirmMobile from '../screens/confirm-mobile.screen';
 
 const OnBoardingStack = () => {
   const route = [
@@ -12,6 +14,14 @@ const OnBoardingStack = () => {
     {
       name: 'signUpMain',
       component: SignUpMain,
+    },
+    {
+      name: 'enterMobile',
+      component: EnterMobile,
+    },
+    {
+      name: 'confirmMobile',
+      component: ConfirmMobile,
     },
   ];
   return (
