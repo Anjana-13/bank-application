@@ -1,9 +1,11 @@
 import {View, Text} from 'react-native';
+import Header from '../../../components/header/header';
+import { navigationRef } from '../../../utils';
 
 const SignUpMain = () => {
     return(
         <View style={{flex:1, backgroundColor:'pink'}}>
-            <Text>{'Signup'}</Text>
+            <Header navigation={navigationRef}/>
         </View>
     )
 };
