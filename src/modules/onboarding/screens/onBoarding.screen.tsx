@@ -1,13 +1,12 @@
-import {Text,Image,TouchableOpacity} from 'react-native';
+import {Text, Image, TouchableOpacity} from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
-import { styles } from '../styles/onBoarding.styles';
-import { NavigationProp, ParamListBase } from '@react-navigation/native';
+import {styles} from '../styles/onBoarding.styles';
+import {NavigationProp, ParamListBase} from '@react-navigation/native';
 
 export interface OnboardingProps {
   navigation: NavigationProp<ParamListBase>;
-
 }
- 
+
 const Done = ({...props}) => {
   return (
     <TouchableOpacity style={styles.doneButton} {...props}>
@@ -15,7 +14,6 @@ const Done = ({...props}) => {
     </TouchableOpacity>
   );
 };
-
 
 const Skip = ({...props}) => {
   return (
@@ -28,30 +26,40 @@ const Skip = ({...props}) => {
 const OnBoardingScreen = ({navigation}: OnboardingProps) => {
   return (
     <Onboarding
-    onDone={() => navigation.navigate('onBoardingStack', {screen:'signUpMain'})}
-    DoneButtonComponent={Done}
-    subTitleStyles={styles.subTitle}
-    showNext={false}
-    SkipButtonComponent ={Skip}
-    bottomBarHighlight={false}
-    pages={[
-      {
-        backgroundColor: '#fff',
-        image: <Image source={require('../../../assets/onBoarding-1.png') } style={styles.image}  />,
-        title: '',
-        subtitle: 'Trusted by millions of people, part of one part',
-      },
-      {
-        backgroundColor: '#fff',
-        image: <Image source={require('../../../assets/onBoarding-2.png')}  style={styles.image} />,
-        title: '',
-        subtitle: 'Receive Money from anywhere in the World',
-      },
-    ]}
-  />
+      onDone={() =>
+        navigation.navigate('onBoardingStack', {screen: 'signUpMain'})
+      }
+      DoneButtonComponent={Done}
+      subTitleStyles={styles.subTitle}
+      showNext={false}
+      SkipButtonComponent={Skip}
+      bottomBarHighlight={false}
+      pages={[
+        {
+          backgroundColor: '#fff',
+          image: (
+            <Image
+              source={require('../../../assets/onBoarding-1.png')}
+              style={styles.image}
+            />
+          ),
+          title: '',
+          subtitle: 'Trusted by millions of people, part of one part',
+        },
+        {
+          backgroundColor: '#fff',
+          image: (
+            <Image
+              source={require('../../../assets/onBoarding-2.png')}
+              style={styles.image}
+            />
+          ),
+          title: '',
+          subtitle: 'Receive Money from anywhere in the World',
+        },
+      ]}
+    />
   );
 };
-
-
 
 export default OnBoardingScreen;
