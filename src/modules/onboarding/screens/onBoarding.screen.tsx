@@ -1,7 +1,13 @@
 import {Text,Image,TouchableOpacity} from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 import { styles } from '../styles/onBoarding.styles';
+import { NavigationProp, ParamListBase } from '@react-navigation/native';
 
+export interface OnboardingProps {
+  navigation: NavigationProp<ParamListBase>;
+
+}
+ 
 const Done = ({...props}) => {
   return (
     <TouchableOpacity style={styles.doneButton} {...props}>
@@ -19,10 +25,10 @@ const Skip = ({...props}) => {
   );
 };
 
-const OnBoardingScreen = ({navigation}) => {
+const OnBoardingScreen = ({navigation}: OnboardingProps) => {
   return (
     <Onboarding
-    onDone={() => navigation.navigate('MainContainer')}
+    onDone={() => navigation.navigate('onBoardingStack', {screen:'signUpMain'})}
     DoneButtonComponent={Done}
     subTitleStyles={styles.subTitle}
     showNext={false}
