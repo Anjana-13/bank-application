@@ -18,4 +18,13 @@ export const styles = StyleSheet.create({
         color: '#000000',
         fontSize: 15,
       },
+      textHeading: {
+        paddingTop: 20,
+      },
+      subHeading: {
+        color: 'black',
+      },
+      continueButton: {
+        marginTop: 100,
+      },
 })

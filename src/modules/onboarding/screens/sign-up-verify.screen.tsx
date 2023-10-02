@@ -1,9 +1,9 @@
-import {Text, TextInput, View, Keyboard} from 'react-native';
-import {CoreButton, Header} from '../../../components';
+import {Text, View} from 'react-native';
+import {CoreButton, CoreTextInput, Header} from '../../../components';
 import {navigationRef} from '../../../utils';
 import {useState} from 'react';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
-import { styles } from '../styles/sign-up-verify.styles';
+import {styles} from '../styles/sign-up-verify.styles';
 
 export interface SignUpVerifyProps {
   navigation: NavigationProp<ParamListBase>;
@@ -20,17 +20,15 @@ const SignUpVerify = ({navigation}: SignUpVerifyProps) => {
         <Text style={styles.verificationCode}>
           {'Enter your mobile number to send verification code'}
         </Text>
-      </View>
-      <View style={styles.inputTextLayout}>
-        <TextInput
-          style={styles.input}
-          onChangeText={value => onChangeNumber(value)}
-          value={number}
-          placeholder="Mobile Number"
-          keyboardType="phone-pad"
-          placeholderTextColor={'#4d4d4f'}
-          maxLength={10}
-        />
+        <View style={styles.inputComponent}>
+          <CoreTextInput
+            onChangeFunction={value => onChangeNumber(value)}
+            value={number}
+            placeholder="Mobile Number"
+            keyboardType="phone-pad"
+            maxLength={10}
+          />
+        </View>
       </View>
       <View>
         <CoreButton

@@ -22,16 +22,9 @@ export const styles = StyleSheet.create({
     color: '#000000',
   },
   confirmButton: {
-    marginTop: 490,
+    marginTop: 450,
   },
-  inputTextLayout: {
-    borderColor: '#304FFE',
-    height: 58,
-    marginHorizontal: 20,
-    borderWidth: 1,
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    paddingTop: 5,
-    marginTop: 10,
+  inputComponent: {
+    marginTop: 20,
   },
 });
