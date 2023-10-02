@@ -1,5 +1,5 @@
 import {Text, TextInput, View, TouchableOpacity} from 'react-native';
-import {CoreButton, CoreIcon, Header} from '../../../components';
+import {CoreButton, CoreIcon, Header, CoreTextInput} from '../../../components';
 import {navigationRef} from '../../../utils';
 import {styles} from '../styles/enter-mobile.styles';
 import {useState} from 'react';
@@ -36,35 +36,30 @@ const EnterMobile = (props: EnterMobileProps) => {
         </Text>
         <View style={styles.phoneAndPassword}>
           <Text style={styles.mobileNumber}>Mobile Number</Text>
-          <View style={styles.inputTextLayout}>
-            <TextInput
-              style={styles.input}
-              onChangeText={value => onChangeNumber(value)}
-              value={number}
-              placeholder="Mobile Number"
-              keyboardType="phone-pad"
-              placeholderTextColor={'#4d4d4f'}
-              maxLength={10}
-            />
-          </View>
+          <CoreTextInput
+            onChangeFunction={value => onChangeNumber(value)}
+            value={number}
+            placeholder="Mobile Number"
+            keyboardType="phone-pad"
+            maxLength={10}
+          />
         </View>
         <Text style={styles.mobileNumber}>Password</Text>
-        <View style={[styles.inputTextLayout, {paddingLeft: 25}]}>
+        <View>
           <CoreIcon
             name="lock-closed-outline"
             size={20}
             color="#4d4d4f"
             iconStyle={styles.lockClosedIcon}
           />
-          <TextInput
-            style={styles.input}
-            onChangeText={value => onPassword(value)}
+          <CoreTextInput
+            onChangeFunction={value => onPassword(value)}
             value={password}
             placeholder="Password"
-            placeholderTextColor={'#4d4d4f'}
-            maxLength={20}
+            maxLength={10}
             secureTextEntry={showPassword ? true : false}
             autoCapitalize="none"
+            extraStyle={styles.extraStyleForPassword}
           />
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <CoreIcon
@@ -81,8 +76,7 @@ const EnterMobile = (props: EnterMobileProps) => {
           buttonLabel={props?.route?.params?.isSignUp ? 'Sign up' : 'Log in'}
           onPress={() => {
             props.navigation.navigate('onBoardingStack', {
-              screen: 'confirmMobile',
-              params: {phoneNumber: number},
+              screen: 'addPersonalInfo',
             });
           }}
           buttonBodyStyle={styles.confirmButton}

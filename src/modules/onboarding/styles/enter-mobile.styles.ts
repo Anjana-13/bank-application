@@ -39,6 +39,9 @@ export const styles = StyleSheet.create({
     paddingTop: 5,
     marginTop: 10,
   },
-  lockClosedIcon: {position: 'absolute', top: 16, left: 4},
-  passwordIcon: {position: 'absolute', right: 10, bottom: 12},
+  lockClosedIcon: {position: 'absolute', top: 28, left: 7},
+  passwordIcon: {position: 'absolute', right: 10, bottom: 14},
+  extraStyleForPassword: {
+    paddingLeft:27,
+  }
 });
