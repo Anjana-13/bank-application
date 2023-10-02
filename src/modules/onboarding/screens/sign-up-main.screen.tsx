@@ -37,7 +37,7 @@ const SignUpMain = (props: SignUpMainProps) => {
             buttonLabel="Sign Up"
             buttonType="primary"
             onPress={() =>
-              props.navigation.navigate('onBoardingStack', {screen: 'enterMobile'})
+              props.navigation.navigate('onBoardingStack', {screen: 'signUpVerify'})
             }></CoreButton>
           <CoreButton
             buttonLabel="Login in"

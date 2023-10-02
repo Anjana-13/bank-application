@@ -4,6 +4,7 @@ import OnBoardingScreen from '../screens/onBoarding.screen';
 import SignUpMain from '../screens/sign-up-main.screen';
 import EnterMobile from '../screens/enter-mobile.screen';
 import ConfirmMobile from '../screens/confirm-mobile.screen';
+import SignUpVerify from '../screens/sign-up-verify.screen';
 
 const OnBoardingStack = () => {
   const route = [
@@ -14,6 +15,10 @@ const OnBoardingStack = () => {
     {
       name: 'signUpMain',
       component: SignUpMain,
+    },
+    {
+      name : 'signUpVerify',
+      component: SignUpVerify
     },
     {
       name: 'enterMobile',
