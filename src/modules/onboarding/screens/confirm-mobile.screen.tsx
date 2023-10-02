@@ -39,6 +39,9 @@ const ConfirmMobile = (props: SignUpMainProps) => {
   const onSubmit = () => {
     if (otpInput && otpInput === code) {
       showBottomToast('Verified successfully!');
+      props.navigation.navigate('onBoardingStack', {screen: 'enterMobile', params: {
+        isSignUp : true
+      }})
     } else {
       showBottomToast('Wrong Code, Please try again');
       setTimeout(() => input.current?.clear(), 1000);
