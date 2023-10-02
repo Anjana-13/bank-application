@@ -22,16 +22,23 @@ export const styles = StyleSheet.create({
     color: '#000000',
   },
   confirmButton: {
-    marginTop: 490,
+    marginTop: 320,
+  },
+  phoneAndPassword: {
+    paddingVertical: 20,
+  },
+  mobileNumber: {
+    color: 'black',
   },
   inputTextLayout: {
     borderColor: '#304FFE',
     height: 58,
-    marginHorizontal: 20,
     borderWidth: 1,
     paddingHorizontal: 10,
     borderRadius: 10,
     paddingTop: 5,
     marginTop: 10,
   },
+  lockClosedIcon: {position: 'absolute', top: 16, left: 4},
+  passwordIcon: {position: 'absolute', right: 10, bottom: 12},
 });
