@@ -13,6 +13,11 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  verificationCode: {
+    marginTop: 10,
+    color: '#000000',
+    fontSize: 15,
+  },
   input: {
     color: '#000000',
   },
@@ -21,12 +26,12 @@ export const styles = StyleSheet.create({
   },
   inputTextLayout: {
     borderColor: '#304FFE',
-    height: 60,
+    height: 58,
     marginHorizontal: 20,
     borderWidth: 1,
-    paddingHorizontal: 15,
+    paddingHorizontal: 10,
     borderRadius: 10,
     paddingTop: 5,
-    marginTop: 10
+    marginTop: 10,
   },
 });

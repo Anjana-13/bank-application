@@ -16,7 +16,10 @@ const EnterMobile = ({navigation}: EnterMobileProps) => {
     <View style={styles.container}>
       <Header navigation={navigationRef} />
       <View style={styles.mobile}>
-        <Text style={styles.enterMobile}>{'Enter your Mobile number'}</Text>
+        <Text style={styles.enterMobile}>{'Sign up'}</Text>
+        <Text style={styles.verificationCode}>
+          {'Enter your mobile number to send verification code'}
+        </Text>
       </View>
       <View style={styles.inputTextLayout}>
         <TextInput
