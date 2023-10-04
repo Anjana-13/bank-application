@@ -27,4 +27,23 @@ export const styles = StyleSheet.create({
       continueButton: {
         marginTop: 100,
       },
+      calendarLayout: {
+        borderColor: '#304FFE',
+        height: 58,
+        borderWidth: 1,
+        paddingHorizontal: 10,
+        borderRadius: 10,
+        paddingTop: 5,
+        marginTop: 10,
+      },
+      calendarPlaceHolder:{
+        color:'#4d4d4f',
+        paddingHorizontal: 4,
+        marginTop: 12,
+      },
+      calendarSelected:{
+        color:'#000000',
+        paddingHorizontal: 3,
+        marginTop: 12,
+      }
 })
