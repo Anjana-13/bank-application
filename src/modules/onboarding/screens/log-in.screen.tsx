@@ -82,7 +82,7 @@ const LogIn = (props: EnterMobileProps) => {
           buttonLabel={'Log in'}
           onPress={() => {
             props.navigation.navigate('onBoardingStack', {
-              screen: 'addPersonalInfo',
+              screen: 'addCardBanner',
             });
           }}
           buttonBodyStyle={styles.confirmButton}

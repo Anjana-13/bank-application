@@ -9,6 +9,7 @@ import AddPersonalInfo from '../screens/add-personal-info.screen';
 import PinSetup from '../screens/pin-setup.screen';
 import Welcome from '../screens/welcome.screen';
 import LogIn from '../screens/log-in.screen';
+import AddCardBanner from '../screens/add-card-banner.screen';
 
 const OnBoardingStack = () => {
   const route = [
@@ -47,6 +48,10 @@ const OnBoardingStack = () => {
     {
       name: 'logIn',
       component: LogIn,
+    },
+    {
+      name: 'addCardBanner',
+      component: AddCardBanner,
     },
   ];
   return (

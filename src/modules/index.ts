@@ -7,6 +7,7 @@ import AddPersonalInfo from "./onboarding/screens/add-personal-info.screen";
 import PinSetup from "./onboarding/screens/pin-setup.screen";
 import Welcome from "./onboarding/screens/welcome.screen";
 import LogIn from "./onboarding/screens/log-in.screen";
+import AddCardBanner from "./onboarding/screens/add-card-banner.screen";
 
 export {
     DashBoardStack,
@@ -17,5 +18,6 @@ export {
     AddPersonalInfo,
     PinSetup,
     Welcome,
-    LogIn
+    LogIn,
+    AddCardBanner
 }
