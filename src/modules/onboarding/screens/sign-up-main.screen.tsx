@@ -42,7 +42,7 @@ const SignUpMain = (props: SignUpMainProps) => {
           <CoreButton
             buttonLabel="Login in"
             buttonType="secondary"
-            onPress={()=>{}}
+            onPress={()=> props.navigation.navigate('onBoardingStack', {screen: 'logIn'})}
             buttonBodyStyle={styles.loginButton}></CoreButton>
         </View>
         <View style={styles.terms}>

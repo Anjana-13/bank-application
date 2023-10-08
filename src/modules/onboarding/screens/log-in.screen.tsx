@@ -1,7 +1,7 @@
 import {Text, TextInput, View, TouchableOpacity} from 'react-native';
 import {CoreButton, CoreIcon, Header, CoreTextInput} from '../../../components';
 import {navigationRef} from '../../../utils';
-import {styles} from '../styles/enter-mobile.styles';
+import {styles} from '../styles/log-in.styles';
 import {useEffect, useState} from 'react';
 import {
   NavigationProp,
@@ -18,24 +18,21 @@ export interface EnterMobileProps {
   }>;
 }
 
-const EnterMobile = (props: EnterMobileProps) => {
-
-  // useEffect(()=>{
-  //   onChangeNumber('');
-  //   onPassword('');
-  // });
-
+const LogIn = (props: EnterMobileProps) => {
   console.log(props?.route?.params?.isSignUp);
   const [number, onChangeNumber] = useState('');
   const [password, onPassword] = useState('');
   const [showPassword, setShowPassword] = useState(true);
 
+  const forgotPassword = () => {
+    
+  };
+
   return (
     <View style={styles.container}>
-      <Header navigation={navigationRef} />
       <View style={styles.mobile}>
         <Text style={styles.enterMobile}>
-          {props?.route?.params?.isSignUp ? 'Create an Account' : 'Log in'}
+          {'Log in to Coinpay'}
         </Text>
         <Text style={styles.verificationCode}>
           {'Enter your Mobile number and Password'}
@@ -75,11 +72,14 @@ const EnterMobile = (props: EnterMobileProps) => {
               iconStyle={styles.passwordIcon}
             />
           </TouchableOpacity>
+          <TouchableOpacity onPress={forgotPassword}>
+              <Text style={styles.resend}>Forgot password?</Text>
+            </TouchableOpacity>
         </View>
       </View>
       <View>
         <CoreButton
-          buttonLabel={props?.route?.params?.isSignUp ? 'Sign up' : 'Log in'}
+          buttonLabel={'Log in'}
           onPress={() => {
             props.navigation.navigate('onBoardingStack', {
               screen: 'addPersonalInfo',
@@ -93,4 +93,4 @@ const EnterMobile = (props: EnterMobileProps) => {
   );
 };
 
-export default EnterMobile;
+export default LogIn;

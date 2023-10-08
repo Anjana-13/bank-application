@@ -19,7 +19,19 @@ import { styles } from '../styles/pin-setup.styles';
   const PinSetup = (props: PinSetupProps) => {
     return(
         <View style={styles.container}>
-            <Text>Hi</Text>
+          <Header navigation={navigationRef} />
+            <Text style={styles.pinSetup}>Pin setup!</Text>
+            <View>
+        <CoreButton
+          buttonLabel={'Continue'}
+          onPress={() => {
+            props.navigation.navigate('onBoardingStack', {
+              screen: 'welcome',
+            });
+          }}
+          buttonBodyStyle={styles.confirmButton}
+          buttonType="primary"></CoreButton>
+      </View>
         </View>
     )
   }

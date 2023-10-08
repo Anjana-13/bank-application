@@ -7,6 +7,8 @@ import ConfirmMobile from '../screens/confirm-mobile.screen';
 import SignUpVerify from '../screens/sign-up-verify.screen';
 import AddPersonalInfo from '../screens/add-personal-info.screen';
 import PinSetup from '../screens/pin-setup.screen';
+import Welcome from '../screens/welcome.screen';
+import LogIn from '../screens/log-in.screen';
 
 const OnBoardingStack = () => {
   const route = [
@@ -37,6 +39,14 @@ const OnBoardingStack = () => {
     {
       name: 'pinSetup',
       component: PinSetup,
+    },
+    {
+      name: 'welcome',
+      component: Welcome,
+    },
+    {
+      name: 'logIn',
+      component: LogIn,
     },
   ];
   return (

@@ -5,6 +5,8 @@ import EnterMobile from "./onboarding/screens/enter-mobile.screen";
 import ConfirmMobile from "./onboarding/screens/confirm-mobile.screen";
 import AddPersonalInfo from "./onboarding/screens/add-personal-info.screen";
 import PinSetup from "./onboarding/screens/pin-setup.screen";
+import Welcome from "./onboarding/screens/welcome.screen";
+import LogIn from "./onboarding/screens/log-in.screen";
 
 export {
     DashBoardStack,
@@ -13,5 +15,7 @@ export {
     EnterMobile,
     ConfirmMobile,
     AddPersonalInfo,
-    PinSetup
+    PinSetup,
+    Welcome,
+    LogIn
 }
