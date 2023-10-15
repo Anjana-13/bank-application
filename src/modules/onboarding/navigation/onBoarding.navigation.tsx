@@ -10,6 +10,8 @@ import PinSetup from '../screens/pin-setup.screen';
 import Welcome from '../screens/welcome.screen';
 import LogIn from '../screens/log-in.screen';
 import AddCardBanner from '../screens/add-card-banner.screen';
+import AddCard from '../screens/add-card.screen';
+import VerifyCardOtp from '../screens/verify-card-otp.screen';
 
 const OnBoardingStack = () => {
   const route = [
@@ -52,6 +54,14 @@ const OnBoardingStack = () => {
     {
       name: 'addCardBanner',
       component: AddCardBanner,
+    },
+    {
+      name: 'addCard',
+      component: AddCard,
+    },
+    {
+      name: 'verifyCardOtp',
+      component: VerifyCardOtp,
     },
   ];
   return (

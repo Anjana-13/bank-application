@@ -36,7 +36,7 @@ const AddCardBanner = (props: PinSetupProps) => {
         <CoreButton
           buttonLabel={'+ Add your card'}
           onPress={() => {
-            props.navigation.navigate('onBoardingStack', {screen: 'logIn'});
+            props.navigation.navigate('onBoardingStack', {screen: 'addCard'});
           }}
           buttonBodyStyle={styles.continueButton}
           buttonType="primary"></CoreButton>
