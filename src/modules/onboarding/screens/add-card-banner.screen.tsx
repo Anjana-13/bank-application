@@ -1,14 +1,6 @@
-import {
-  Text,
-  TextInput,
-  View,
-  TouchableOpacity,
-  ScrollView,
-  Image,
-} from 'react-native';
-import {CoreButton, CoreTextInput, Header} from '../../../components';
+import {Text, View, Image} from 'react-native';
+import {CoreButton, Header} from '../../../components';
 import {navigationRef} from '../../../utils';
-import {useState} from 'react';
 import {NavigationProp, ParamListBase} from '@react-navigation/native';
 import {styles} from '../styles/add-card-banner.styles';
 

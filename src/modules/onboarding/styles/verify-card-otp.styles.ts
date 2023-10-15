@@ -4,10 +4,10 @@ export const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 20
     },
-    mobile: {
+    verify: {
         paddingTop: 20,
       },
-      enterMobile: {
+      verifyCard: {
         color: '#000000',
         fontSize: 20,
         fontWeight: 'bold',

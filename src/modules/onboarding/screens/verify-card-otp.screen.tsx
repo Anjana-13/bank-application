@@ -15,7 +15,7 @@ import { styles } from '../styles/verify-card-otp.styles';
     navigation: NavigationProp<ParamListBase>;
     route: RouteProp<{
       params: {
-        emailId: any;
+        emailId: string;
       };
     }>;
   }
@@ -65,8 +65,8 @@ import { styles } from '../styles/verify-card-otp.styles';
       <View>
         <Header navigation={navigationRef}></Header>
         <View style={styles.container}>
-          <View style={styles.mobile}>
-            <Text style={styles.enterMobile}>{'Verify your card'}</Text>
+          <View style={styles.verify}>
+            <Text style={styles.verifyCard}>{'Verify your card'}</Text>
           </View>
           <View style={styles.digitCode}>
             <Text style={styles.sendCode}>

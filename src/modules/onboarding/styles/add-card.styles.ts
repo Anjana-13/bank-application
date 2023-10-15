@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         paddingVertical: 20,
         paddingHorizontal: 20,
       },
-      personalInfo: {
+      addCard: {
         color: '#000000',
         fontSize: 20,
         fontWeight: 'bold',
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
       subHeading: {
         color: 'black',
       },
-      continueButton: {
+      verifyButton: {
         marginTop: 100,
       },
       calendarLayout: {
