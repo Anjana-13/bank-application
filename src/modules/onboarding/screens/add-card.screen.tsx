@@ -14,6 +14,11 @@ const AddCard = (props: AddCardProps) => {
   const [cardNumber, setCardNumber] = useState('');
   const [email, setEmail] = useState('');
 
+  const formatCardNumber = (number: string) => {
+    number = number.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+    return number.replace(/[^\d ]/g, '');
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Header navigation={navigationRef} />
@@ -42,9 +47,10 @@ const AddCard = (props: AddCardProps) => {
         <View style={styles.textHeading}>
           <Text style={styles.subHeading}>Card Number</Text>
           <CoreTextInput
-            onChangeFunction={value => setCardNumber(value)}
+            onChangeFunction={value => setCardNumber(formatCardNumber(value))}
             value={cardNumber}
             placeholder="1234 5678 9010 1122"
+            maxLength={19}
           />
         </View>
       </View>
@@ -56,6 +62,7 @@ const AddCard = (props: AddCardProps) => {
               screen: 'verifyCardOtp',
               params: {
                 emailId: email,
+                accountNumber : cardNumber
               },
             });
           }}

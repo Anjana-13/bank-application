@@ -10,6 +10,7 @@ import LogIn from "./onboarding/screens/log-in.screen";
 import AddCardBanner from "./onboarding/screens/add-card-banner.screen";
 import AddCard from "./onboarding/screens/add-card.screen";
 import VerifyCardOtp from "./onboarding/screens/verify-card-otp.screen";
+import CardList from "./onboarding/screens/card-list.screen";
 
 export {
     DashBoardStack,
@@ -23,5 +24,6 @@ export {
     LogIn,
     AddCardBanner,
     AddCard,
-    VerifyCardOtp
+    VerifyCardOtp,
+    CardList
 }

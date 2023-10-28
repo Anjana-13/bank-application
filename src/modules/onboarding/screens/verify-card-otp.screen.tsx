@@ -16,6 +16,7 @@ import { styles } from '../styles/verify-card-otp.styles';
     route: RouteProp<{
       params: {
         emailId: string;
+        accountNumber: string;
       };
     }>;
   }
@@ -35,12 +36,15 @@ import { styles } from '../styles/verify-card-otp.styles';
         return () => clearInterval(countInterval);
       }
     }, [countDown]);
+
+    console.log('>>>props.route.params.accountNumber',props.route.params.accountNumber);
+    
   
     const onSubmit = () => {
       if (otpInput && otpInput === code) {
         showBottomToast('Verified successfully!');
-        props.navigation.navigate('onBoardingStack', {screen: 'enterMobile', params: {
-          isSignUp : true
+        props.navigation.navigate('onBoardingStack', {screen: 'cardList', params: {
+          accountNumber : props.route.params.accountNumber
         }})
       } else {
         showBottomToast('Wrong Code, Please try again');

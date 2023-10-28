@@ -12,6 +12,7 @@ import LogIn from '../screens/log-in.screen';
 import AddCardBanner from '../screens/add-card-banner.screen';
 import AddCard from '../screens/add-card.screen';
 import VerifyCardOtp from '../screens/verify-card-otp.screen';
+import CardList from '../screens/card-list.screen';
 
 const OnBoardingStack = () => {
   const route = [
@@ -62,6 +63,10 @@ const OnBoardingStack = () => {
     {
       name: 'verifyCardOtp',
       component: VerifyCardOtp,
+    }, 
+    {
+      name: 'cardList',
+      component: CardList,
     },
   ];
   return (
