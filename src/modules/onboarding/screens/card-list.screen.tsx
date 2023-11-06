@@ -48,8 +48,8 @@ const CardList = (props: SignUpMainProps) => {
       <View style={styles.verifyButton}>
         <CoreButton
           onPress={() => {
-            props.navigation.navigate('onBoardingStack', {
-              screen: 'addCard',
+            props.navigation.navigate('dashBoardStack', {
+              screen: 'dashBoardScreen',
             });
           }}
           buttonLabel="Continue"

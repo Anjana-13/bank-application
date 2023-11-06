@@ -18,6 +18,7 @@ const DashBoardStack= () => {
                     key={route.name}
                     name={route.name}
                     component={route.component}
+                    options={{headerShown: false}}
                     />
                 )
             })}
