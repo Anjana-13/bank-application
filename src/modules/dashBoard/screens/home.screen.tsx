@@ -2,7 +2,7 @@ import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import {styles} from '../styles/home.styles';
 import {CoreIcon} from '../../../components';
 const Home = () => {
-  const data = [
+  const transactionData = [
     {
       id: '1',
       icon: 'card-outline',
@@ -37,7 +37,7 @@ const Home = () => {
     },
   ];
 
-  const renderItem = ({item}) => (
+  const transactionRenderItem = ({item}) => (
     <View style={styles.item}>
       <View style={[styles.circle, {backgroundColor: item.backgroundColor}]}>
         <CoreIcon name={item.icon} size={25} color={item.color} />
@@ -46,6 +46,19 @@ const Home = () => {
       <Text style={styles.amount}>{item.amount}</Text>
     </View>
   );
+
+  const transactionList = () => {
+    return (
+      <View style={styles.listContainer}>
+        <FlatList
+          data={transactionData}
+          renderItem={transactionRenderItem}
+          keyExtractor={item => item.id}
+          scrollEnabled={false}
+        />
+      </View>
+    );
+  };
 
   return (
     <View style={styles.mainContainer}>
@@ -62,14 +75,7 @@ const Home = () => {
               />
             </TouchableOpacity>
           </View>
-          <View style={styles.listContainer}>
-            <FlatList
-              data={data}
-              renderItem={renderItem}
-              keyExtractor={item => item.id}
-              scrollEnabled={false}
-            />
-          </View>
+          {transactionList()}
         </View>
       </View>
       <View style={styles.divider}></View>
@@ -78,3 +84,6 @@ const Home = () => {
 };
 
 export default Home;
+//<ion-icon name="paper-plane-outline"></ion-icon>
+//<ion-icon name="add-circle-outline"></ion-icon>
+//<ion-icon name="business-outline"></ion-icon>
