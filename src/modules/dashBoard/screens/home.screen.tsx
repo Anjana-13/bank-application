@@ -1,22 +1,47 @@
 import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import {styles} from '../styles/home.styles';
-import {CoreButton, CoreIcon} from '../../../components';
+import {CoreIcon} from '../../../components';
 const Home = () => {
   const data = [
-    {id: '1', icon: 'card', title: 'Spending', amount: '$10'},
-    {id: '2', icon: 'cash', title: 'Income', amount: '$20'},
-    {id: '3', icon: 'newspaper', title: 'Bills', amount: '$30'},
-    {id: '4', icon: 'logo-usd', title: 'Savings', amount: '$40'},
+    {
+      id: '1',
+      icon: 'card-outline',
+      title: 'Spending',
+      amount: '$10',
+      color: '#304ffe',
+      backgroundColor: '#b0baf5',
+    },
+    {
+      id: '2',
+      icon: 'cash-outline',
+      title: 'Income',
+      amount: '$20',
+      color: '#178f35',
+      backgroundColor: '#adf7c0',
+    },
+    {
+      id: '3',
+      icon: 'newspaper-outline',
+      title: 'Bills',
+      amount: '$30',
+      color: '#edc602',
+      backgroundColor: '#f5f2c1',
+    },
+    {
+      id: '4',
+      icon: 'logo-usd',
+      title: 'Savings',
+      amount: '$40',
+      color: '#f0872b',
+      backgroundColor: '#f7be8d',
+    },
   ];
 
   const renderItem = ({item}) => (
     <View style={styles.item}>
-      <CoreIcon
-        name={item.icon}
-        iconStyle={styles.icon}
-        size={30}
-        color={'red'}
-      />
+      <View style={[styles.circle, {backgroundColor: item.backgroundColor}]}>
+        <CoreIcon name={item.icon} size={25} color={item.color} />
+      </View>
       <Text style={styles.title}>{item.title}</Text>
       <Text style={styles.amount}>{item.amount}</Text>
     </View>
@@ -42,6 +67,7 @@ const Home = () => {
               data={data}
               renderItem={renderItem}
               keyExtractor={item => item.id}
+              scrollEnabled={false}
             />
           </View>
         </View>

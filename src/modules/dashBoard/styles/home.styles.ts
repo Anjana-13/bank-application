@@ -34,7 +34,8 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex:1,
     marginVertical:10,
-    borderRadius:10
+    borderRadius:10,
+    
   },
   transactionTitleView:{
     height:30,
@@ -49,23 +50,28 @@ export const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 16,
-    borderBottomWidth: 1,
+    paddingVertical: 25,
+    paddingHorizontal:15,
+    borderBottomWidth: 0.5,
     borderBottomColor: '#ccc',
   },
-  icon: {
-    width: 24,
-    height: 24,
-    marginRight: 10,
-  },
   title: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color:'red',
-    marginRight: 'auto', // Push amount to the right
+    fontSize: 17,
+    marginLeft:13,
+    color:'black',
+    marginRight: 'auto',
   },
   amount: {
     fontSize: 16,
     color:'red',
   },
+  circle:{
+    width:45,
+    height:45,
+    borderRadius:25,
+    backgroundColor:'yellow',
+    alignItems:'center',
+    justifyContent:'center',
+    
+  }
 })
