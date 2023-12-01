@@ -37,6 +37,37 @@ const Home = () => {
     },
   ];
 
+  const categoryList = [{
+    id: '1',
+    icon: 'paper-plane-outline',
+    title: 'Send',
+    color: '#304ffe',
+  },
+  {
+    id: '1',
+    icon: 'add-circle-outline',
+    title: 'Receive',
+    color: '#f0872b',
+  },
+  {
+    id: '1',
+    icon: 'business-outline',
+    title: 'Bank',
+    color: '#178f35',
+  },
+];
+
+const categoryRenderItem = ({item}) => (
+  <View style={styles.item1}>
+    <TouchableOpacity>
+    <View style={[styles.circle1]}>
+      <CoreIcon name={item.icon} size={25} color={item.color} />
+    </View>
+    <Text style={styles.title1}>{item.title}</Text>
+    </TouchableOpacity>
+  </View>
+);
+
   const transactionRenderItem = ({item}) => (
     <View style={styles.item}>
       <View style={[styles.circle, {backgroundColor: item.backgroundColor}]}>
@@ -78,12 +109,16 @@ const Home = () => {
           {transactionList()}
         </View>
       </View>
-      <View style={styles.divider}></View>
+      <View style={styles.divider}>
+      <FlatList
+          data={categoryList}
+          renderItem={categoryRenderItem}
+          keyExtractor={item => item.id}
+          horizontal={true}
+        />
+      </View>
     </View>
   );
 };
 
 export default Home;
-//<ion-icon name="paper-plane-outline"></ion-icon>
-//<ion-icon name="add-circle-outline"></ion-icon>
-//<ion-icon name="business-outline"></ion-icon>

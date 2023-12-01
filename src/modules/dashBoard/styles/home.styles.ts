@@ -55,11 +55,25 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderBottomColor: '#ccc',
   },
+  item1: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent:'center',
+    paddingHorizontal:35,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#ccc',
+  },
   title: {
     fontSize: 17,
     marginLeft:13,
     color:'black',
     marginRight: 'auto',
+  },
+  title1: {
+    fontSize: 17,
+    color:'black',
+    alignItems:'center',
+    justifyContent:'center',
   },
   amount: {
     fontSize: 16,
@@ -73,5 +87,10 @@ export const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     
+  },
+  circle1:{
+    alignItems:'center',
+    justifyContent:'center',
+    marginBottom:3,
   }
 })
