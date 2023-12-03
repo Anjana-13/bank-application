@@ -44,13 +44,13 @@ const Home = () => {
     color: '#304ffe',
   },
   {
-    id: '1',
+    id: '2',
     icon: 'add-circle-outline',
     title: 'Receive',
     color: '#f0872b',
   },
   {
-    id: '1',
+    id: '3',
     icon: 'business-outline',
     title: 'Bank',
     color: '#178f35',
@@ -90,8 +90,9 @@ const categoryRenderItem = ({item}) => (
       </View>
     );
   };
-
+  
   return (
+    
     <View style={styles.mainContainer}>
       <View style={styles.wrapper}>
         <View style={styles.topContainer}></View>
@@ -110,6 +111,7 @@ const categoryRenderItem = ({item}) => (
         </View>
       </View>
       <View style={styles.divider}>
+        
       <FlatList
           data={categoryList}
           renderItem={categoryRenderItem}
