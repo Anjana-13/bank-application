@@ -90,12 +90,16 @@ const categoryRenderItem = ({item}) => (
       </View>
     );
   };
-  
+
   return (
-    
     <View style={styles.mainContainer}>
       <View style={styles.wrapper}>
-        <View style={styles.topContainer}></View>
+        <View style={styles.topContainer}>
+          <View style={styles.balanceContainer}>
+            <Text style={styles.balance}>$20,000</Text>
+            <Text style={styles.availableBalance}>Available Balance</Text>
+          </View>
+        </View>
         <View style={styles.bottomContainer}>
           <View style={styles.transactionTitleView}>
             <Text style={styles.transactionTitle}>Transaction</Text>

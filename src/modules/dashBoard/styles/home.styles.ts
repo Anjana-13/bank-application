@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
     flex:35,
     backgroundColor:'#304FFE',
     position: 'relative',
+    justifyContent:'center',
+    alignItems:'center'
   },
   bottomContainer: {
     flex:65,
@@ -92,5 +94,21 @@ export const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     marginBottom:3,
-  }
+  },
+  balanceContainer:{
+    marginBottom:30,
+  },
+  balance:{
+    color:'white',
+    fontSize: 28,
+    fontWeight:'bold',
+    textAlign:'center'
+  }, 
+   availableBalance:{
+    marginTop:10,
+    color:'white',
+    fontSize: 15,
+    alignSelf:'center',
+    textAlign:'center'
+  },
 })
